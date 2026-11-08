@@ -19,7 +19,7 @@ BalanceGame/
 - 선택: "C++ Clang 도구" (MuJoCo 문서에 따르면 Windows에서는 Clang이 성능이 더 좋았다고 함)
 
 ## 빌드
-`CMakeLists.txt`의 `GIT_TAG <최신 릴리스 태그>`를 실제 MuJoCo 릴리스 태그로 바꾼 뒤 실행합니다.
+MuJoCo는 `CMakeLists.txt`에서 `3.9.0` 태그로 고정되어 있으며, 첫 configure 시 자동으로 내려받습니다.
 
 ```
 cmake -S . -B build -G "Visual Studio 17 2022" -A x64

@@ -15,10 +15,10 @@ set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(glfw)
 
 # MuJoCo (물리 엔진)
-# GIT_TAG는 최신 릴리스 태그로 바꿔 주세요. 예: 3.x.y
+# 3.x 계열 최신 릴리스로 고정 (4.0.0은 메이저 업데이트라 API 변경 가능성 있음)
 FetchContent_Declare(mujoco
   GIT_REPOSITORY https://github.com/google-deepmind/mujoco.git
-  GIT_TAG <최신 릴리스 태그>)
+  GIT_TAG 3.9.0)
 FetchContent_MakeAvailable(mujoco)
 
 add_executable(balance_game src/main.cpp)
