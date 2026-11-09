@@ -28,3 +28,8 @@ target_link_libraries(balance_game PRIVATE mujoco glfw)
 add_custom_command(TARGET balance_game POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E copy_directory
           ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:balance_game>/assets)
+
+# 소스의 한글 문자열을 UTF-8 로 컴파일 (MSVC)
+if(MSVC)
+  target_compile_options(balance_game PRIVATE /utf-8)
+endif()
